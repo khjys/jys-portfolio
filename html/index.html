@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=2.0,user-scalable=yes, target-densitydpi=device-dpi" />
+    <meta name="format-detection" content="telephone=no,email=no,address=no" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="포트폴리오" />
+    <meta property="og:description" content="포트폴리오" />
+    <title>포트폴리오</title>
+    <link rel="stylesheet" type="text/css" href="../css/inc.css" />
+    <link rel="stylesheet" type="text/css" href="../css/font.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/board.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style_response.css" media="screen and (min-width:1px)" />
+    <link rel="stylesheet" type="text/css" href="../css/xeicon.min.css" />
+    <link rel="stylesheet" type="text/css" href="../js/animated/animated.css" />
+    <script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../js/inc.js"></script>
+    <script type="text/javascript" src="../js/placeholders.min.js" defer="defer"></script>
+    <script type="text/javascript" src="../js/animated/jquery.waypoints.min.js"></script>
+    <script type="text/javascript" src="../js/scroll/jquery.malihu.PageScroll2id.js"></script>
+    <script type="text/javascript" src="../js/ui.js"></script>
+</head>
+<body>
+    <!--header start-->
+    <div id="header">
+        <div class="top_wrap">
+            <ul class="menu fl_wrap">
+                <li class="on"><a href="#" class="vm_wrap"><span class="vm_tt"><i class="t1">Employee</i><i class="t2">test</i><i class="xi xi-arrow-right"></i></span></a></li>
+                <li class=""><a href="#" class="vm_wrap"><span class="vm_tt"><i class="t1">Employer</i><i class="t2">test1</i><i class="xi xi-arrow-right"></i></span></a></li>
+            </ul>
+        </div>
+        <div class="gnb_wrap">
+            <div class="box1 fl_wrap">
+                <a href="javascript:void(0);" class="all" onclick="toggleClass(this,'.gnb_wrap'); toggleClass(this,'body,html','hidden')"><i class="xi xi-bars"></i></a>
+                <div id="nav" class="nav">
+                    <div class="nav_layer m_hide"></div>
+                    <div class="nav_wrap">
+                        <div class="nav_logo m_hide">
+                            <div class="logo">
+                                <a href="#" class="vm_wrap"><!--
+                                --><div class="vm_tt in">
+                                        <span class="txt"><img src="../images/inc/logo_txt.svg"></span>
+                                        <span class="hand st1"><img src="../images/inc/logo_hand.svg"></span>
+                                        <span class="hand st2"><img src="../images/inc/logo_hand.svg"></span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="nav_menu m_hide">
+                            <ul class="gnb fl_wrap">
+                                <li class="m_main on">
+                                    <ul class="dp2 fl_wrap">
+                                        <li><a rel="scrollLink" href="#about" class="vm_wrap _mPS2id-h"><span class="vm_tt">ABOUT</span></a></li>
+                                        <li><a rel="scrollLink" href="#portfoilo" class="vm_wrap _mPS2id-h"><span class="vm_tt">PORTFOILO</span></a></li>
+                                        <li><a rel="scrollLink" href="#contact" class="vm_wrap _mPS2id-h"><span class="vm_tt">CONTACT</span></a></li>
+                                    </ul>
+                                </li>
+                            </ul>       
+                        </div><!--nav_mem end-->
+                        <div class="nav_quick">
+                            <div id="quick" class="quick">
+                                <a href="javascript:void(0);" class="close_btn" onclick="toggleClass(this,'#quick');"><i class="xi"></i></a>
+                                <div class="quick_wrap vm_wrap"><!--
+                                --><div class="inner vm_tt">
+                                        <div class="hide">
+                                            <div class="logo">
+                                                <a href="#" class="vm_wrap"><!--
+                                                --><div class="vm_tt in">
+                                                        <span class="txt"><img src="../images/inc/logo_txt.svg"></span>
+                                                        <span class="hand st1"><img src="../images/inc/logo_hand.svg"></span>
+                                                        <span class="hand st2"><img src="../images/inc/logo_hand.svg"></span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <ul class="con_wrap">
+                                            <li>
+                                                <div class="txt tel_area">
+                                                    <a onclick="UI.Layout.telLink('010-0000-0000',this)">
+                                                    <p class="icon"><i class="xi xi-call"></i></p>
+                                                    <p class="t1 en hide">010-0000-00000</p>
+                                                    </a>
+                                                    <p class="t2 hide"><a href="#" class="en">E-mail. kjbjys56@naver.com</a></p>
+                                                </div>
+                                            </li>
+                                            <li class="m_hide"><a href="javascript:goTop();" class="goTop en"><i class="xi xi-angle-up"></i><i class="tt">TOP</i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <script type="text/javascript">
+                            quickShow();
+                            $(window).resize(function() {
+                            quickShow();
+                            });
+                            function quickShow(){
+                                var winW = $(window).width();
+                                var str = $("#quick").attr("class");
+                                if(str != undefined){
+                                    if (winW <= 1600) {
+                                        if (str.indexOf("on") == -1) {
+                                        $("#quick").toggleClass("on");
+                                        }
+                                        if(winW <= 1460) {
+                                        $("#quick").addClass('quick_M');
+                                        }else{
+                                        $("#quick").removeClass('quick_M');
+                                        }
+                                    }else{
+                                        if (str.indexOf("on") != -1) {
+                                        $("#quick").toggleClass("on");
+                                        }
+                                    }
+                                }
+                            }
+                            function kakao_pop(){
+                                window.open("http://pf.kakao.com/_sSxdxlK ", "popupWin", "width=500,height=600");
+
+
+                            }
+                            </script>
+                        </div>          
+                    </div>
+                </div>
+                <script type="text/javascript">
+                $("#nav .nav_layer").on( 'click', function(e){
+                    $("#header .gnb_wrap").toggleClass("on");
+                    $("body,html").toggleClass("hidden");
+                });
+                </script>            
+                <div class="logo_wrap">
+                    <div class="logo">
+                        <a href="#" class="vm_wrap"><!--
+                        --><div class="vm_tt in">
+                                <span class="txt"><img src="../images/inc/logo_txt.svg"></span>
+                                <span class="hand st1"><img src="../images/inc/logo_hand.svg"></span>
+                                <span class="hand st2"><img src="../images/inc/logo_hand.svg"></span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="menu right">
+                    <ul class="gnb fl_wrap">
+                        <li class="m_main on">
+                            <ul class="dp2 fl_wrap">
+                                <li><a rel="scrollLink" href="#about" class="vm_wrap _mPS2id-h"><span class="vm_tt">ABOUT</span></a></li>
+                                <li><a rel="scrollLink" href="#portfoilo" class="vm_wrap _mPS2id-h"><span class="vm_tt">PORTFOLIO</span></a></li>
+                                <li><a rel="scrollLink" href="#contact" class="vm_wrap _mPS2id-h"><span class="vm_tt">CONTACT</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>                
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            UI.Layout.headerFix();
+        </script>
+    </div>
+    <!--header end-->
+    <!--contents start-->
+    <div id="contents">
+	    <div class="page_top_wrap employee_top">
+            <p class="img pos1" data-animation="bounceInLeft"><img src="../images/main/visual_img1.png" /></p>
+            <p class="img pos2" data-animation="bounceInRight" data-delay="0.3"><img src="../images/main/visual_img2.png" /></p>
+            <div class="slogan" data-animation="fadeInUp" data-delay="0.6">
+                <p class="txt1"><span class="tt">문구가 들어갑니다문구가 들어갑니다문구가 들어갑니다문구가 들어갑니다문구가 들어갑니다</span></p>
+                <p class="txt2"><span class="icon"><img src="../images/main/visual_icon2.png" /></span><strong>Click</strong> <span>한번으로</span> <strong>끝!</strong></p>
+                <p class="txt3"><strong class="point">문구가 들어갑니다</strong> <span>문구가 들어갑니다</span></p>
+            </div>
+        </div>
+        <div class="page_tit_wrap">
+            <div class="box1">
+                <h2 class="tit" data-animation="fadeIn" data-delay="0.8"><span class="t1">Portfolio</span><span class="t2">문구 문구</span></h2>
+            </div>
+        </div>
+        <div class="section page_about" id="about">
+            <div class="box1">
+                <div class="page_con about_wrap fl_wrap" data-animation="fadeInUp" data-delay="0.8">
+                    <div class="about_tit">
+                        <div class="page_tit">
+                            <p class="tit_b"><strong>portfolio</strong></p>
+                            <p class="tit_s">문구 <br />test</p>
+                        </div>
+                        <p class="img"><img src="../images/main/about_illust1.png" /></p>
+                    </div>
+                    <dl class="about_txt">
+                        <dt><strong>test</strong><span>는</span></dt>
+                        <dd>퇴사하면서 겪게 되는 모든 정신적 고통과 압박 당하는 괴로움을 벗어날 수 있도록 모든 문제들을 대신 해결해 드립니다. <br />
+                            회사를 그만두는 과정은 쉬운 듯하지만 어렵다보니 단순히 퇴사 의사만 말하면 되는데 직접 말을 하자니 매우 떨릴 수 있습니다. <br />
+                            누구에게, 어느 시기에 말해야 할지, 퇴사를 하면 임금을 얼마나 받게 될지, 혹시 못 받는 돈은 없는지, 모든 것이 막연하고 두려울 것입니다. <br />
+                            그렇기에 퇴사를 하는데 따르는 위험들, 대면하고 싶지 않은 상사, 제대로 받을 수 있는 임금의 범위 등 완벽한 퇴사를 위해 노동법률 전문가 그룹인 '<?=$site_name?>'가 안전하고 신속 정확하게 서비스를 제공해줍니다.
+                        </dd>
+                        <dd class="sign">test</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="page_con choice_wrap">
+                <div class="box1">
+                    <div class="page_tit ac" data-animation="fadeInUp">
+                        <p class="tit_s">선택해야 하는 이유</p>
+                    </div>
+                    <ul class="list fl_wrap">
+                        <li data-animation="fadeInUp" data-delay="0.3">
+                            <div class="in">
+                                <div class="img resize"><span class="re"><img src="../images/main/about_img1.jpg" /></span></div>
+                                <div class="con">
+                                    <p class="num">1</p>
+                                    <p class="tit">신속한 One Stop 비대면 서비스</p>
+                                    <p class="txt">사용자와 직접 대면할 필요 없습니다. <br />
+                                        간단한 서명 하나로 당신의 입장을 대변해드립니다. <br />
+                                        당신의 모든 감정노동은 저희가 하겠습니다</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li data-animation="fadeInUp" data-delay="0.6">
+                            <div class="in">
+                                <div class="img resize"><span class="re"><img src="../images/main/about_img2.jpg" /></span></div>
+                                <div class="con">
+                                    <p class="num">2</p>
+                                    <p class="tit">전문성 &amp; 신뢰성</p>
+                                    <p class="txt">무작정 퇴사를 하게 될 경우 발생되는 법률상 분쟁들이 있습니다. <br />
+                                        퇴사 컨설팅 그룹 <?=$site_name?>를 통해 제반 분쟁으로부터 보호해드립니다. 확실히 예방합니다.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li data-animation="fadeInUp" data-delay="0.9">
+                            <div class="in">
+                                <div class="img resize"><span class="re"><img src="../images/main/about_img3.jpg" /></span></div>
+                                <div class="con">
+                                    <p class="num">3</p>
+                                    <p class="tit">비용절감과 수익성</p>
+                                    <p class="txt">퇴사시 고려사항이 무엇인지, 나갈 때 받을 돈이 얼마인지 이 모든 것을 알아보는데 드는 당신의 시간과 비용 및 수익성을 <?=$site_name?>가 한방에 해결해드립니다.</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--회사소개 end -->
+        <div class="section page_program" id="portfoilo">
+            <!--프로그램 소개 -->
+            <div class="page_con programInfo_wrap">
+                <div class="box1 pr">
+                    <p class="pos circle"></p>
+                    <p class="pos img1"><img src="../images/main/program_illust1.png" /></p>
+                    <div class="page_tit" data-animation="fadeInUp" data-delay="0.2">
+                        <p class="tit_b"><strong><?=$nav_program_en?></strong></p>
+                        <p class="tit_s">안전하고 신속 정확한 서비스! <?=$site_name?> 프로그램</p>
+                        <ul class="txt_point">
+                            <li><span>서비스 안내 문의 상담 (카카오톡 / 전화 / 이메일)</span></li>
+                            <li><span>모든 비용은 선입금</span></li>
+                        </ul>
+                    </div>
+                    <ul class="list st1 fl_wrap sec4">
+                        <li data-animation="fadeInUp" data-delay="0.3">
+                            <a rel="scrollLink" href="#" class="in">
+                                <p class="tit"><span class="num en">1.</span> <span class="tt">퍼슨제약</span></p>
+                                <div class="con">
+                                    <p class="txt">퇴사에 관한 모든 사항들을 <strong class="c1">전문적으로 답변</strong>해드립니다.</p>
+                                    <ul class="ex">
+                                        <li>질문사항 답변은 물론,</li>
+                                        <li>전반적 퇴사 컨설팅까지!</li>
+                                    </ul>
+                                </div>
+                                <p class="more"><i class="tt">자세히보기</i><i class="xi arrow"></i></p>
+                            </a>
+                        </li>
+                        <li data-animation="fadeInUp" data-delay="0.6">
+                            <a rel="scrollLink" href="#" class="in">
+                                <p class="tit"><span class="num en">2.</span> <span class="tt"><?=$program_cateA[1]?></span></p>
+                                <div class="con">
+                                    <p class="txt">혼자 하기 힘든 사직서 제출 <br />
+                                        <strong class="c1">퇴사 컨설팅 그룹 <?=$site_name?>가 대신 제출</strong>해 드립니다. </p>
+                                        <div class="txt"><p class="point"><strong>안심하고 맡겨주세요!</strong></p></div>
+                                    </div>
+                                    <p class="more"><i class="tt">자세히보기</i><i class="xi arrow"></i></p>
+                                </a>
+                            </li>
+                            <li data-animation="fadeInUp" data-delay="0.9">
+                                <a rel="scrollLink" href="#" class="in">
+                                    <p class="tit"><span class="num en">3.</span> <span class="tt"><?=$program_cateA[2]?></span></p>
+                                    <div class="con">
+                                        <p class="txt">회사가 주는 대로 받으실 건가요? </p>
+                                        <div class="txt">
+                                            <p class="point"><strong>당신의 숨겨진 돈! </strong></p>
+                                            <p class="point"><strong>찾아드립니다!</strong></p>
+                                        </div>
+                                    </div>
+                                    <p class="more"><i class="tt">자세히보기</i><i class="xi arrow"></i></p>
+                                </a>
+                            </li>
+                            <li data-animation="fadeInUp" data-delay="1.2">
+                                <a rel="scrollLink" href="#" class="in">
+                                    <p class="tit"><span class="num en">4.</span> <span class="tt en">All service <br />One Stop Package</span></p>
+                                    <div class="con">
+                                        <p class="txt"><span class="no en">1</span> + <span class="no en">2</span> + <span class="no en">3</span></p>
+                                        <p class="txt"><strong class="c1">모든 서비스</strong>를 다 누리고 싶으시다면 </p>
+                                        <div class="txt">
+                                            <p class="point"><strong>원스탑 패키지로 </strong><br /><strong>신청하세요!</strong></p>
+                                        </div>
+                                    </div>
+                                    <p class="more"><i class="tt">자세히보기</i><i class="xi arrow"></i></p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section page_inquiry" id="contact">
+            <div class="box1">
+                <div class="page_con">
+                    <div class="page_tit" data-animation="fadeInUp">
+                        <p class="tit_s"><span>Contact</span> <span class="point">Us</span></p>
+                    </div>
+                    <ul class="customer_wrap fl_wrap">
+                        <li data-animation="fadeInUp" data-delay="0.4">
+                            <a href="javascript:void(0);" class="in kakao_area">
+                                <div class="resize">
+                                    <div class="re vm_wrap"><!--
+                                        --><div class="vm_tt">
+                                            <p class="kakao_icon"><i class="xi xi-kakaotalk"></i></p>
+                                            <p class="kakao_tit">카카오톡 플러스친구</p>
+                                            <p class="kakao_id"><strong></strong></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li data-animation="fadeInUp" data-delay="0.8">
+                            <div class="in tel_area">
+                                <div class="resize">
+                                    <div class="re vm_wrap"><!--
+                                        --><div class="vm_tt">
+                                            <p class="tel_icon"><i class="xi xi-call"></i></p>
+                                            <p class="tel_t1"><a onclick="UI.Layout.telLink('<?=$site_tel?>',this)" class="tel_link">010-0000-0000</a></p>
+                                            <p class="tel_t2"><a href="mailto:kjbjys56@naver.com" class="tel_link">E-mail. kjbjys56@naver.com</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li data-animation="fadeInUp" data-delay="1.2">
+                            <div class="in add_area">
+                                <div class="resize">
+                                    <div class="re vm_wrap"><!--
+                                        --><div class="vm_tt">
+                                            <p class="add_tit"><i class="xi xi-city"></i> <strong class="tt">사업장</strong> <span class="tt">주소</span></p>
+                                            <p class="add_txt"><?=$site_add?></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>                    
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!--
+        <div class="box1">
+            <ul class="flex list wrap">
+                <li><a href="https://khjys.github.io/project/portfolio/html/firson/index.html" target="blank">퍼슨제약</a></li>
+                <li><a href="https://khjys.github.io/project/portfolio/html/sspharm/index.html" target="blank">삼성제약</a></li>
+                <li><a href="https://khjys.github.io/project/portfolio/html/gnu/index.html" target="blank">경상국립대간호학과노인연구센터플랫폼</a></li>
+                <li><a href="https://khjys.github.io/project/portfolio/html/hancomcare/index.html" target="blank">한컴말랑말랑행복케어</a></li>
+                <li><a href="https://khjys.github.io/project/portfolio/html/kchn/index.html" target="blank">한국지역사회간호학회</a></li>
+                <li><a href="https://khjys.github.io/project/portfolio/html/wonil/main.html" target="blank">원일환경</a></li>
+                <li><a href="https://khjys.github.io/project/portfolio/html/hairheal/index.html" target="blank">올뷰케어헤어힐</a></li>
+                <li><a href="https://khjys.github.io/project/portfolio/html/hangil/main.html" target="blank">한길아이티</a></li>
+                <li><a href="https://khjys.github.io/project/portfolio/html/korecen/index.html" target="blank">코리센</a></li>
+                <li><a href="https://khjys.github.io/project/portfolio/html/lab/index.html" target="blank">랩바모스</a></li>
+                <li><a href="https://khjys.github.io/project/portfolio/html/kla/index.html" target="blank">광복회</a></li>
+            </ul>
+        </div>-->
+    </div>
+    <!--contents end-->
+    <!--footer start-->
+    <div id="footer">
+        <div class="box1">
+            <div class="info_wrap">
+                <strong class="tt"><?=$site_name?></strong>
+                <span class="tt"><?=$site_add?></span>
+                <br />
+                <span class="tt">Tel. <a onclick="UI.Layout.telLink('<?=$site_tel?>',this)"><?=$site_tel?></a></span>
+                <span class="tt">Fax. <?=$site_fax?></span>
+                <a href="mailto:kjbjys56@naver.com" class="tt">E-mail. kjbjys56@naver.com</a>
+                <p class="copy">Copyright(C) jungyoungsun. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+    <!--footer end-->
+    <script type="text/javascript">
+        //화면 스크롤효과
+        $(function(){
+            $(document).on("ready",function(){
+                var headerH = $("#header .gnb_wrap").height();
+                $("a[rel='scrollLink']").mPageScroll2id({
+                    highlightSelector: ".gnb a",
+                    highlightClass: 'active',
+                    offset:headerH
+                });
+            });
+        });
+        </script>
+        <script type="text/javascript">
+        function gnbOn(){
+            var obj = $(".gnb");
+            obj.find("li.m_main").addClass("on");
+            obj.find("li.m_main li.sm_").addClass("on");
+            obj.find("li.m_main li.sm_ li.ssm_").addClass("on");
+        }
+        gnbOn();
+        UI.Layout.contentSize();
+        UI.Layout.bodyLoad();
+        UI.Layout.bodyScroll();
+        UI.Layout.bodyMobile();
+        UI.Motion.scrollAni();
+        UI.Motion.ieFixed();
+        
+    </script>
+</body>
+</html>
